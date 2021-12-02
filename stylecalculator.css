@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 50px;
 }
 
 .calculatorGrid {
@@ -19,12 +19,12 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   margin: auto;
-  height: 150%;
-  width: 50%;
-  -ms-grid-columns: (150px)[4];
-      grid-template-columns: repeat(4, 150px);
-  -ms-grid-rows: minmax(50px, auto) minmax(120px, auto) (100px)[5] minmax(50px, auto);
-      grid-template-rows: minmax(50px, auto) minmax(120px, auto) repeat(5, 100px) minmax(50px, auto);
+  height: 600px;
+  width: 500px;
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: minmax(90px, auto) (70px)[5] minmax(20px, auto);
+      grid-template-rows: minmax(90px, auto) repeat(5, 70px) minmax(20px, auto);
   background: #e4ecf6;
   gap: 15px;
   border: 1px solid lightgrey;
@@ -76,7 +76,8 @@ body {
   padding: 10px;
   word-wrap: break-word;
   word-break: break-all;
-  border: 1px solid lightgrey;
+  border: 1px solid darkgrey;
+  border-radius: 15px;
   -webkit-box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -92,21 +93,23 @@ body {
 }
 
 .header {
-  grid-column: 1 / -1;
   background-color: #f1d0ed;
+  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 15px;
   border: 1px solid lightgrey;
+  margin: auto;
+  color: white;
 }
 /*# sourceMappingURL=stylecalculator.css.map */

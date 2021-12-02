@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 50px;
     // background: linear-gradient(to right, #cbce91ff, #ea738dff);
 }
 .calculatorGrid {
@@ -14,13 +14,10 @@ body {
     justify-content: center;
     align-content: center;
     margin: auto;
-    height: 150%;
-    width: 50%;
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: minmax(50px, auto) minmax(120px, auto) repeat(5, 100px) minmax(
-            50px,
-            auto
-        );
+    height: 600px;
+    width: 500px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(90px, auto) repeat(5, 70px) minmax(20px, auto);
     background: #e4ecf6;
     gap: 15px;
     border: 1px solid lightgrey;
@@ -61,7 +58,8 @@ body {
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
-    border: 1px solid lightgrey;
+    border: 1px solid darkgrey;
+    border-radius: 15px;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 
     &__previousOperand {
@@ -76,12 +74,14 @@ body {
 }
 
 .header {
-    grid-column: 1 / -1;
     background-color: #f1d0ed;
+    width: 500px;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
     flex-direction: column;
-    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
     border: 1px solid lightgrey;
+    margin: auto;
+    color: white;
 }
