@@ -7,23 +7,33 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #cbce91ff, #ea738dff);
+    // background: linear-gradient(to right, #cbce91ff, #ea738dff);
 }
 .calculatorGrid {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    margin: auto;
+    height: 150%;
+    width: 50%;
     grid-template-columns: repeat(4, 150px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-rows: minmax(50px, auto) minmax(120px, auto) repeat(5, 100px) minmax(
+            50px,
+            auto
+        );
     background: #e4ecf6;
-    gap: 10px;
+    gap: 15px;
+    border: 1px solid lightgrey;
 
     &__button {
         cursor: pointer;
         font-size: xx-large;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         background-color: #f1d0ed;
+        box-shadow: 5px 5px rgb(124, 124, 124);
+        border-right: 1px solid rgb(75, 75, 75);
+        border-bottom: 1px solid rgb(75, 75, 75);
+        border-top: 1px solid white;
+        border-left: 1px solid white;
     }
 
     &__button:hover {
@@ -34,7 +44,7 @@ body {
         grid-column: span 2;
         color: black;
         background-color: #f1d0ed;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px rgb(124, 124, 124);
     }
     &__largerButtons:hover {
         background-color: pink;
@@ -52,7 +62,7 @@ body {
     word-wrap: break-word;
     word-break: break-all;
     border: 1px solid lightgrey;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 
     &__previousOperand {
         color: black;
@@ -63,4 +73,15 @@ body {
         color: black;
         font-size: 2.5rem;
     }
+}
+
+.header {
+    grid-column: 1 / -1;
+    background-color: #f1d0ed;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid lightgrey;
 }
